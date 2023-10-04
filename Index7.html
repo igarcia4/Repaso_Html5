@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+<title>Formulario Wed</title>
+</head>
+<body>
+    <header>
+<section>
+
+<label for="Email">Email</label>
+<input id="Email" name="Email" type="email"><br>
+<label for="wed">Wed Personal</label>
+<input id="wed" name="wed" type="url"><br>
+<label for="tel">Telefono</label>
+<input id="tel" name="tel" type="tele"> <br>
+<label for="colorfd">Elegir color de fondo</label>
+<input id="colorfd" name="colorfd" type="color">
+
+<form action="cambia.php" method="post" name="login">
+    <label for="fecha">Fecha: </label> <input type="date" ><br>
+    <input type="submit" value="Enviar">
+    </form>
+    <script>
+    function admiteTipo(valor) {
+    let input = document.createElement('input');
+    input.setAttribute('type', valor);
+    if (input.type == 'text') {
+    return false;
+    } else {
+    return true;
+    }
+    }
+    if (!admiteTipo('date')) {
+    Alert("Tu navegador no está anticuado. Te recomendamos actualizarlo")
+    }
+
+
+
+    
+</script>
+
+
+<label for="rango">Valores</label>
+<input type="range" min="0" max="20" step="2" name="rango" id="rango">
+<input type="number" id="numero" name="numero">
+<script>
+const rango = document.getElementById("rango")
+const numero = document.getElementById("numero")
+rango.onchange = function(){
+numero.value = rango.value;
+}
+</script>
+</section>
+
+    </header>
+<footer>
+
+</footer>
+</body>
+</html>

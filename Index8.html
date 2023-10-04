@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+<title>Formulario Wed</title>
+</head>
+<body bgcolor="coral">
+    <header>
+        <h1>Cuestionario</h1>
+        <br><br>
+<section >
+ 
+    <label for="fecha">Fecha: </label>
+    <input id="fecha" name="fecha" type="date">
+    <br> <br>
+    <label for="fechayhoralocal">Fecha y hora local: </label>
+    <input id="fechayhoralocal" name="fechayhoralocal"
+    type="datetime-local"> <br>
+    <br>
+    <label for="mes">Mes: </label>
+    <input id="mes" name="mes" type="month">
+<br><br>
+    <form action="gestiona.php" method="get">
+        <label for="dia">Elige tu día de la semana:</label>
+        <input list="dias" name="dia" id="dia">
+        <datalist id="dias">
+        <option value="Lunes">
+        <option value="Martes">
+        <option value="Miércoles">
+        <option value="Jueves">
+        <option value="Viernes">
+        <option value="Sábado">
+        <option value="Domingo">
+        </datalist>
+       
+        </form>
+        <br>
+        <label for="rango">Valores</label>
+
+        <input type="range" min="0" max="20" step="1" name="rango" id="rango">
+<form action="gestiona_datos.php" method="get" autocomplete="off">
+    <br>
+    <label for="colorfd">Tu color favorito es?</label>
+    <input id="colorfd" name="colorfd" type="color">
+    <br>
+    <br>
+    <label>Nombre: </label>
+    <input type="text" id="nombre"  name="nombre" placeholder="Tu nombre
+    aquí" pattern="[A-Z]{1}[a-z]*" required>
+    <br> <br>
+    <label>Apellido: </label>
+    <input type="text" id="Apellido"  name="Apellido" placeholder="Tu Apellido
+    aquí" pattern="[A-Z]{1}[a-z]*" required>
+
+</section>
+
+    </header>
+<footer>
+    <br><br>
+<input type="submit">
+</footer>
+</body>
+</html>
